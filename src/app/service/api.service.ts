@@ -10,9 +10,15 @@ import { company } from '../company';
 })
 
 export class ApiService {
+  
+  //Local URLs
+  //companyUrl = 'http://localhost:8081/api/v1.0/market/company';
+  //stockUrl = 'http://localhost:8082/api/v1.0/market/stock';
 
-  companyUrl = 'http://localhost:8081/api/v1.0/market/company';
-  stockUrl = 'http://localhost:8082/api/v1.0/market/stock';
+  //Azure URLs
+  companyUrl = 'http://company.eastus.azurecontainer.io:8081/api/v1.0/market/company';
+  stockUrl = 'http://stock.eastus.azurecontainer.io:8082/api/v1.0/market/stock';
+
   registerSuccess: boolean = false;
   companyResponse: company = new company;
   companyResponseList: company[] = new Array;
